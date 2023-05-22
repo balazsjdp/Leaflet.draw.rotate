@@ -251,7 +251,7 @@ L.Handler.PathDrag = L.Handler.extend( /** @lends  L.Path.Drag.prototype */ {
       var contains = this._path._containsPoint;
       this._path._containsPoint = L.Util.falseFn;
       L.Util.requestAnimFrame(function() {
-        L.DomEvent.skipped({type: 'click'});
+        //L.DomEvent.skipped({type: 'click'});
         this._path._containsPoint = contains;
       }, this);
     }
@@ -263,7 +263,7 @@ L.Handler.PathDrag = L.Handler.extend( /** @lends  L.Path.Drag.prototype */ {
 
     if (this._mapDraggingWasEnabled) {
       if (moved) {
-        L.DomEvent.fakeStop({type: 'click'});
+        //L.DomEvent.fakeStop({type: 'click'});
       }
       this._path._map.dragging.enable();
     }
